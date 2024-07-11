@@ -1,6 +1,8 @@
 /**
  * InnerEhealthrsys
  */
+import java.util.*;
+
 interface Doctor {
     void accept_appointments();
     void reject_appointments();
@@ -26,7 +28,7 @@ interface Healthcare {
 
 class Admin implements Doctor, Patient, Healthcare{
     public void accept_appointments(){
-        System.out.println("Accept");
+        System.out.println("Accepted");
 
     }
     public void reject_appointments(){
@@ -37,15 +39,23 @@ class Admin implements Doctor, Patient, Healthcare{
 
     }
     public void prescribe(){
-        System.out.println("Prescribe");
+        System.out.println("Prescription");
 
     }
     public void book_appointment(){
-        System.out.println("Book");
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter patient ID to book appointment: ");
+        int patientId = s.nextInt();
+        System.out.println("Appointment booked for patient ID: " + patientId);
+        System.out.println("Booked");
 
     }
     public void cancel_appointment(){
-        System.out.println("Cancel");
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter appointment ID to cancel: ");
+        int appointmentId = s.nextInt();
+        System.out.println("Appointment ID " + appointmentId + " canceled");
+        System.out.println("Cancelled");
 
     }
     public void view_records(){
@@ -53,7 +63,7 @@ class Admin implements Doctor, Patient, Healthcare{
 
     }
     public void view_doctors(){
-        System.out.println("View Doctors");
+        System.out.println("View Doctors:");
 
     }
 }
@@ -71,6 +81,7 @@ public class Ehealthrsys extends Admin {
         obj.view_doctors();
         obj.view_records();
         obj.view_patients();
+        
         
     }
 
