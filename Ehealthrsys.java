@@ -63,7 +63,7 @@ public class Ehealthrsys extends Admin {
     public static void main(String[] args) {
 
         Ehealthrsys obj= new Ehealthrsys();
-        System.out.println(" Accept "+ obj.accept_appointments());
+        obj.accept_appointments();
         obj.book_appointment();
         obj.cancel_appointment();
         obj.prescribe();
