@@ -1,6 +1,3 @@
-/**
- * InnerEhealthrsys
- */
 import java.util.*;
 
 interface Doctor {
