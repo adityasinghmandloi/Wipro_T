@@ -74,7 +74,7 @@ class Doctor extends Person implements HealthRecord {
 public class Helthrecords {
     public static void main(String[] args) {
         Patient patient = new Patient("Snow", 1, "Fever", "Rest");
-        Doctor doctor = new Doctor("Dr. Aditi", 101, "General Medicine", "10 AM - 5 PM");
+        Doctor doctor = new Doctor("Dr. Melisa", 101, "General Medicine", "10 AM - 5 PM");
 
         patient.recordDetails();
         doctor.recordDetails();
