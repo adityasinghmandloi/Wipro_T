@@ -28,8 +28,8 @@ class Person {
 }
 
 class Patient extends Person implements HealthRecord {
-    private String ailment;
-    private String treatment;
+    String ailment;
+    String treatment;
 
     public Patient(String name, int id, String ailment, String treatment) {
         super(name, id);
